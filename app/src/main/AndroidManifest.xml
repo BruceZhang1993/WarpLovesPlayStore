@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WarpLovesPlayStore"
+        tools:targetApi="31">
+        <!-- 设置为 Xposed 模块 -->
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+
+        <meta-data
+            android:name="xposedscope"
+            android:resource="@array/xposed_scope" />
+
+        <!-- 设置你的模块描述 -->
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/description" />
+
+        <!-- 最低 Xposed 版本号，若你正在使用 EdXposed/LSPosed，建议最低为 93 -->
+        <meta-data
+            android:name="xposedminversion"
+            android:value="93" />
+
+        <!-- 可选：配置支持 New XSharedPreferences 可无需调整 xposedminversion 为 93 -->
+        <meta-data
+            android:name="xposedsharedprefs"
+            android:value="true" />
+    </application>
+</manifest>
