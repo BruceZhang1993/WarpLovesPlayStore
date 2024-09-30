@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     // 作为 Xposed 模块使用务必添加，其它情况可选
     autowire(libs.plugins.com.google.devtools.ksp)
+    autowire(libs.plugins.org.jetbrains.kotlin.plugin.serialization)
 }
 
 android {
@@ -53,4 +54,5 @@ dependencies {
     compileOnly(de.robv.android.xposed.api)
     // 作为 Xposed 模块使用务必添加，其它情况可选
     ksp(com.highcapable.yukihookapi.ksp.xposed)
+    implementation(org.jetbrains.kotlinx.kotlinx.serialization.json)
 }

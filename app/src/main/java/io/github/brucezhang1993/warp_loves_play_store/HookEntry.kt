@@ -15,6 +15,6 @@ object HookEntry : IYukiHookXposedInit {
     }
 
     override fun onHook() = YukiHookAPI.encase {
-        loadApp("com.cloudflare.onedotonedotonedotone", PlayStoreWhitelistHooker)
+        loadApp("com.cloudflare.onedotonedotonedotone", PlayStoreWhitelistHooker, WarpConfigHooker)
     }
 }
